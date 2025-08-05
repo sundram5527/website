@@ -8,7 +8,11 @@ const serverless = require('serverless-http');
 // const PORT = 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://website-frontend-alpha-two.vercel.app/', // your frontend URL
+  methods: ['GET', 'POST'], // Add others like PUT, DELETE if needed
+  credentials: true // Only if you're sending cookies
+}));
 app.use(express.json());
 
 // MongoDB connection
