@@ -4,7 +4,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const PORT = 5000;
+const serverless = require('serverless-http');
+// const PORT = 5000;
 
 // Middleware
 app.use(cors());
@@ -52,4 +53,8 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+//app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
+// Export the app as a serverless function
+module.exports = app;
+module.exports.handler = serverless(app);
