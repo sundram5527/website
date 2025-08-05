@@ -1,5 +1,5 @@
-// Backend: Express server (index.js) // install express mongoose
-//backend vercel hosting link: websitebackend-4fuvgt33x-sundram-kumars-projects-6a3481a2.vercel.app
+// Backend: Express server (index.js) // install express mongoose 
+//backend vercel hosting link: https://websitebackend-six.vercel.app/
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
